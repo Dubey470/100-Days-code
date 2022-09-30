@@ -1,0 +1,26 @@
+1. OBJECT AND CLASSES.
+ JAVA CLASS: A class is a blueprint for the object.
+
+class syntax:
+class Classname
+{
+   //field
+   //method
+}
+
+object syntax:
+classname object =new classname();
+
+Examples of class and object:
+class student
+{
+  int id;
+  string name;
+}
+
+public static void main(String args[]){
+student s1=new student(); // creating an object of student
+System.out.println(s1.id);
+System.out.println(s1.name);
+}
+}
