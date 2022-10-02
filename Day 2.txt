@@ -1,0 +1,53 @@
+DAY 2:
+
+DECISION MAKING AND LOOPS:
+JAVA PROGRAM TO CALCULATE SUM OF NATURAL NUMBERS using FOR loop.
+
+public class naturalnumber
+{
+	public static void main(String args[])
+	{
+		int num=100, sum=0;
+		for(int i=1;i<=num;i++)
+		{
+			sum+=1;
+		}
+		System.out.println("sum="+sum);
+	}
+}	
+
+JAVA PROGRAM TO CALCULATE SUM OF NATURAL NUMBERS using WHILE loop.
+
+public static naturalnumber
+{
+	public static void main(String args[])
+	{
+		
+		int num=100, i=1,sum=0;
+		while(i<=num)
+		{
+			sum+=i;
+			i++;
+		}
+		System.out.println("sum="+sum);
+	}
+}
+
+
+JAVA PROGRAM TO FIND FACTORIAL OF A NUMBER USING FOR LOOP.
+ 
+public class factorial
+{
+	public static void main(String args[])
+	{
+		int num=10;
+		factorial=10;
+		for(int i=1;i<=num;i++)
+		{
+			factorial*=i;
+		}
+		System.out.println("factorial of %d=%d",num,factorial);
+	}
+}
+
+		
