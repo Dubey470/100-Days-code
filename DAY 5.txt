@@ -1,0 +1,94 @@
+DAY 5: 
+EXCEPTIONAL HANDLING
+
+Exception Handling is use to handle the run time errors like arithmetic exception, classnotofound exception.
+	Different approaches to handle exceptions in Java.
+
+1. try .. catch
+
+The try-catch block is used to handle exceptions in Java. 
+
+Syntax:
+try {
+  // code
+}
+catch(Exception e) {
+  // code
+}
+
+
+Examples:
+class Main {
+  public static void main(String[] args) {
+
+    try {
+
+      // code that generate exception
+      int divideByZero = 5 / 0;
+      System.out.println("Rest of code in try block");
+    }
+    
+    catch (ArithmeticException e) {
+      System.out.println("ArithmeticException => " + e.getMessage());
+    }
+  }
+}
+
+
+2.Java throw and throws keyword
+
+The Java throw keyword is used to explicitly throw a single exception.
+
+Examples:
+class Main {
+  // declareing the type of exception
+  public static void findFile() throws IOException {
+
+    // code that may generate IOException
+    File newFile = new File("test.txt");
+    FileInputStream stream = new FileInputStream(newFile);
+  }
+
+  public static void main(String[] args) {
+    try {
+      findFile();
+    }
+    catch (IOException e) {
+      System.out.println(e);
+    }
+  }
+}
+
+3.Java finally block:
+
+The finally block is optional.For each try block, there can be only one finally block.
+
+ syntax:
+
+try {
+  //code
+}
+catch (ExceptionType1 e1) { 
+  // catch block
+}
+finally {
+  // finally block always executes
+}
+
+Example:
+class Main {
+  public static void main(String[] args) {
+    try {
+      // code that generates exception
+      int divideByZero = 5 / 0;
+    }
+
+    catch (ArithmeticException e) {
+      System.out.println("ArithmeticException => " + e.getMessage());
+    }
+    
+    finally {
+      System.out.println("This is the finally block");
+    }
+  }
+}
