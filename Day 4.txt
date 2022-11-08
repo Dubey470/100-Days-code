@@ -21,7 +21,7 @@ public class Main {
   }
 }
 -------------------------------------------------------------------------------------------
-JAVA PROGRAM TO PRINT Inverted half pyramid using *
+JAVA PROGRAM TO PRINT INVERTED HALF PYRAMID USING *
 * * * * *
 * * * *
 * * * 
