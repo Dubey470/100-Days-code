@@ -24,3 +24,12 @@ class LinearSearch {
     System.out.print("Element found at index: " + result);
   }
 }
+---------------------------------------------------------------------------------------
+output:
+Input: array[] = {10, 20, 80, 30, 60, 50,110, 100, 130, 170}, x = 110;
+Output: 6
+Explanation: Element found at index 6
+
+Input: arr[] = {10, 20, 80, 30, 60, 50,110, 100, 130, 170}, x = 175;
+Output: -1
+Explanation: Element not found
