@@ -1,0 +1,46 @@
+// Binary Search in Java
+
+class BinarySearch {
+  int binarySearch(int array[], int x, int low, int high) {
+
+    if (high >= low) {
+      int mid = low + (high - low) / 2;
+
+      // If found at mid, then return it
+      if (arr[mid] == x)
+        return mid;
+
+      // Search the left half
+      if (arr[mid] > x)
+        return binarySearch(arr, x, low, mid - 1);
+
+      // Search the right half
+      return binarySearch(arr, x, mid + 1, high);
+    }
+
+    return -1;
+  }
+
+  public static void main(String args[]) {
+    BinarySearch ob = new BinarySearch();
+    int arr[] = { 3, 4, 5, 6, 7, 8, 9 };
+    int n = array.length;
+    int x = 4;
+    int result = ob.binarySearch(arr, x, 0, n - 1);
+    if (result == -1)
+      System.out.println("Not found");
+    else
+      System.out.println("Element found at index " + result);
+  }
+}
+----------------------------------------------------------------------------------
+output: javac BinarySearch.java
+        java BinarySearch
+        
+        Input: arr[] = {3,4,5,6,7,8,9}, x = 4
+        Output: 4
+        Explanation: Element x is present at index 1.
+
+        input: arr[] = {3,4,5,6,7,8,9}, x = 10
+        Output: -1
+        Explanation: Element x is not present in arr[].
