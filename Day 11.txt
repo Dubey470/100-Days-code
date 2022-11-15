@@ -1,0 +1,69 @@
+//Java program to implement stack using arrays.//
+
+public class StackArray {
+
+    int STACK_SIZE;
+    int[] stack;
+
+    public StackArray(int size){
+        this.STACK_SIZE = size;
+        this.stack = new int[size];
+    }
+
+
+    public int push(int top,int ele){
+        if(top == STACK_SIZE-1){
+            System.out.println("Stack Overflow.");
+        }else {
+            top++;
+            stack[top] = ele;
+        }
+        return top;
+    }
+
+    public int pop(int top){
+        if (top == -1){
+            System.out.println("Stack Underflow");
+        }
+        else
+        {
+            System.out.println(String.format("%d removed from the Stack.",stack[top--]));
+        }
+
+        return top;
+    }
+
+    public void display(int top){
+        if (top == -1)
+        {
+            System.out.println("Stack is Empty.");
+        }
+        else
+        {
+            while(top>0)
+            {
+                System.out.print(String.format("%d--->",stack[top]));
+                top--;
+            }
+            System.out.print(String.format("%d NULL",stack[top]));
+        }
+    }
+
+
+    public int stackSize(int top){
+        int count = 0;
+        int temp = top;
+        if (temp == -1)
+        {
+            return count;
+        }
+        else
+        {
+            while (temp>= 0){
+                ++count;
+                temp--;
+            }
+        }
+        return count;
+    }
+}
