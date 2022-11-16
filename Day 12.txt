@@ -1,0 +1,114 @@
+// Java program for implementation stack using linked list
+
+class StackNode
+{
+	public int data;
+	public StackNode next;
+	public StackNode(int data, StackNode top)
+	{
+		this.data = data;
+		this.next = top;
+	}
+}
+class MyStack
+{
+	public StackNode top;
+	public int count;
+	public MyStack()
+	{
+		this.top = null;
+		this.count = 0;
+	}
+	// Returns the number of element in stack
+	public int size()
+	{
+		return count;
+	}
+	public boolean isEmpty()
+	{
+		if (this.size() > 0)
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
+	// Add a new element in stack
+	public void push(int data)
+	{
+		// Make a new stack node
+		// And set as top
+		this.top = new StackNode(data, this.top);
+		// Increase node value
+		this.count++;
+	}
+	// Add a top element in stack
+	public int pop()
+	{
+		int temp = 0;
+		if (this.isEmpty() == false)
+		{
+			// Get remove top value
+			temp = this.top.data;
+			this.top = this.top.next;
+			// Reduce size
+			this.count--;
+		}
+		return temp;
+	}
+	// Used to get top element of stack
+	public int peek()
+	{
+		if (!this.isEmpty())
+		{
+			return top.data;
+		}
+		else
+		{
+			return 0;
+		}
+	}
+}
+public class Test
+{
+	public static void main(String[] args)
+	{
+		// Create new stack 
+		MyStack s = new MyStack();
+		System.out.println("\n Is empty : " + s.isEmpty());
+		// Add element
+		s.push(15);
+		s.push(14);
+		s.push(31);
+		s.push(21);
+		s.push(10);
+		
+		System.out.println("\n Top  : " + s.peek());
+		System.out.println(" Size : " + s.size());
+        System.out.println("\n Is empty : " + s.isEmpty());
+		// Delete Stack Element
+		int data = s.pop();
+		System.out.println("\n Pop element " + data);
+		System.out.println(" Size : " + s.size());
+		data = s.pop();
+		System.out.println("\n Pop element " + data);
+		System.out.println(" Size : " + s.size());
+	}
+}
+--------------------------------------------------------------------------------------
+Output
+
+ Is empty : true
+
+ Top  : 10
+ Size : 5
+
+ Is empty : false
+
+ Pop element 10
+ Size : 4
+
+ Pop element 21
+ Size : 3
