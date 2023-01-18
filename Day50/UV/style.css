@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  background: black;
+  height: 100vh;
+}
+
+body .sun,
+body .sun--bg {
+  position: absolute;
+  filter: url("#goovey");
+  height: 100vh;
+   background: url("https://d2r55xnwy6nx47.cloudfront.net/uploads/2018/07/SolarFull_SeanDoran_2880FullwidthLede-2880x1620.jpg");
+  background-position: center;
+  width: 100%;
+  background-size: cover;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  background:transparent;
+  width: 100%;
+ }
+
+ ::-webkit-slider-thumb {
+  mix-blend-mode: hue;
+  -webkit-appearance: none;
+  width: 30px;
+ 
+  filter: blur(30px);
+  background: #fff;
+  box-shadow: -100vw 0 0 100vw dodgerblue;
+}
+
+
+
+
+
+
