@@ -1,0 +1,94 @@
+<!-- How to make pagination using html and css -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		Day 60 of #100dayscode
+	</title>
+
+	<style>
+
+		
+		h1 {
+			color: #5D6D7E;
+		}
+
+		
+		.pagination_section {
+			position: relative;
+		}
+
+		
+		.pagination_section a {
+			color: black;
+			padding: 10px 18px;
+			text-decoration: none;
+		}
+
+		
+		.pagination_section a:hover:not(.active) {
+			background-color: #5D6D7E
+			color: coral;
+		}
+
+		/* pagination hover effect on active*/
+
+		a:nth-child(5) {
+			background-color: #5D6D7E;
+			color: white;
+		}
+
+		a:nth-child(1) {
+			font-weight: bold;
+		}
+
+		a:nth-child(7) {
+			font-weight: bold;
+		}
+
+		.content {
+			margin: 50px;
+			padding: 15px;
+			width: 700px;
+			height: 200px;
+			border: 2px solid black;
+		}
+	</style>
+</head>
+
+<body>
+	<center>
+		
+		
+		<h1><u>VIT BHOPAL</h1></u>
+
+		
+<p>INFORMATION TECHNOLOGY</p>
+
+
+		
+		<div class="content">
+			<h3><u><i>ABOUT US:</h3></u></i>
+
+			<article>
+				VIT was established with the aim of providing quality higher education on par with international standards. It persistently seeks and adopts innovative methods to improve the quality of higher education on a consistent basis.The campus has a cosmopolitan atmosphere with students from all corners of the globe. Experienced and learned teachers are strongly encouraged to nurture the students. The global standards set at VIT in the field of teaching and research spur us on in our relentless pursuit of excellence. 
+			</article>
+		</div>
+
+		
+		<div class="pagination_section">
+			<a href="#"><< Previous</a>
+			<a href="#" title="Algorithm">1</a>
+			<a href="#" title="DataStructure">2</a>
+			<a href="#" title="Languages">3</a>
+			<a href="#" title="Interview" class="active">4</a>
+			<a href="#" title="practice">5</a>
+			<a href="#">Next >></a>
+		</div>
+
+	</center>
+</body>
+
+</html>
